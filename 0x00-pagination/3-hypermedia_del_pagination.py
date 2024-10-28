@@ -2,8 +2,8 @@
 """
 Deletion-resilient hypermedia pagination
 """
+
 import csv
-import math
 from typing import List, Dict
 
 class Server:
@@ -55,4 +55,8 @@ class Server:
             'page_size': page_size,
             'data': data
         }
+
+if __name__ == "__main__":
+    server = Server()
+    print(server.get_hyper_index(0, 10))
 
